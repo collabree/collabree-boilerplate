@@ -14,6 +14,8 @@ void main() {
     await tester.tap(find.byIcon(FlutterIcons.add_mdi));
     await tester.pump();
 
+    // debugDumpApp();
+
     expect(find.text('You have pushed the button this many times: 11'), findsOneWidget);
   });
 }

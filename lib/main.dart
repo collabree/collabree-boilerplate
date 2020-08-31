@@ -2,15 +2,15 @@ import 'package:collabree/collabreeLocalizations.dart';
 import 'package:collabree/collabreeLocalizationsDelegate.dart';
 import 'package:collabree/collabreeLogger.dart';
 import 'package:collabree/constants.dart';
+import 'package:collabree/example/exampleBloc.dart';
 import 'package:collabree/example/pages/examplePage.dart';
-import 'package:collabree/loggingBlocObserver.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 
 void main() {
-  Bloc.observer = LoggingBlocObserver();
   CollabreeLogger.setup();
+  Bloc.observer = LoggingBlocObserver();
   WidgetsFlutterBinding.ensureInitialized();
 
   runApp(CollabreeApp());
@@ -31,7 +31,10 @@ class CollabreeApp extends StatelessWidget {
       ],
       supportedLocales: CollabreeLocalizationsDelegate.supportedLocals,
       onGenerateTitle: (BuildContext context) => S.of(context).appTitle,
-      home: const ExamplePage(),
+      home: BlocProvider<ExampleBloc>(
+        create: (context) => ExampleBloc(),
+        child: ExamplePage(),
+      ),
     );
   }
 }

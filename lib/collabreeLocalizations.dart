@@ -46,6 +46,12 @@ class S {
         desc: 'The title of the app.',
       );
 
+  String get incrementButton => Intl.message(
+        'Increment',
+        name: 'incrementButton',
+        desc: 'Action Button Name to increment the counter',
+      );
+
   String counterMessage(int count) => Intl.message(
         'You have pushed the button this many times: $count',
         name: 'counterMessage',

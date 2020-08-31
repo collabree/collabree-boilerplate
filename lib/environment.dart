@@ -10,8 +10,7 @@ class DevEndpoints implements Endpoints {
   String get baseUrl => 'https://$host';
 
   @override
-  String get host => 'api-dev.collabree.com';
-  // String get host => 'localhost:3000';
+  String get host => 'localhost:3000';
 }
 
 class ProdEndpoints implements Endpoints {
@@ -21,7 +20,7 @@ class ProdEndpoints implements Endpoints {
   String get baseUrl => 'https://$host';
 
   @override
-  String get host => 'api.collabree.com';
+  String get host => '...';
 }
 
 class Environment {
