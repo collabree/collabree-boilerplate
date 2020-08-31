@@ -1,0 +1,30 @@
+{
+  "@@locale": "en",
+  "appTitle": "Collabree",
+  "@appTitle": {
+    "description": "The title of the app."
+  },
+  "counterMessage": "You have pushed the button this many times: {count}",
+  "@counterMessage": {
+    "description": "Simple message that shows the count",
+    "placeholders": {
+      "count": {}
+    }
+  },
+  "exampleOfPlural": "{points,plural, =0{{pointsAsString} points}=1{{pointsAsString} point}other{{pointsAsString} points}}",
+  "@exampleOfPlural": {},
+  "dayOfWeek": "{dayOfWeek,select, Monday{Monday}Tuesday{Tuesday}Wednesday{Wednesday}Thursday{Thursday}Friday{Friday}Saturday{Saturday}Sunday{Sunday}None{-}other{-}}",
+  "@dayOfWeek": {
+    "description": "Name of the day in a week",
+    "placeholders": {
+      "dayOfWeek": {}
+    }
+  },
+  "loginErrorMessage": "{errorCode,select, ERROR_ACCOUNT_EXISTS_WITH_DIFFERENT_CREDENTIAL{This account already exists with different credentials.}ERROR_CUSTOM_TOKEN_MISMATCH{Invalid token configuration.}ERROR_DISABLED{Indicates the user''s account is disabled.}ERROR_EMAIL_ALREADY_IN_USE{The email is already in use by a different account.}ERROR_INVALID{Indicates the email address is invalid.}ERROR_INVALID_ACTION_CODE{The activation PIN is expired or has already been used.}ERROR_INVALID_CREDENTIAL{Your credentials are malformed or invalid.}ERROR_INVALID_CUSTOM_TOKEN{The custom token format is incorrect.}ERROR_INVALID_EMAIL{Your email address is malformed.}ERROR_NOT_ALLOWED{Indicates that email and email sign-in link accounts are not enabled. Enable them in the Auth section of the Firebase console.}ERROR_OPERATION_NOT_ALLOWED{This authorization method is not enabled. Please choose something different.}ERROR_TOO_MANY_REQUESTS{You had too many failed attempts. Please wait a couple of minutes and try again.}ERROR_USER_DISABLED{This accounts was disabled. Please contact customer support if this is a mistake on our side.}ERROR_USER_NOT_FOUND{If there is no user corresponding to the given input.}ERROR_WEAK_PASSWORD{Your password is not strong enough.}EXPIRED_ACTION_CODE{Password reset code has expired.}INVALID_ACTION_CODE{Password reset code is invalid. This can happen if the code is malformed or has already been used.}NO_VERIFICATION{We are missing mandatory informations. Please start the login from the beginning.}UNKNOWN{There was a unknown error. Please begin the login process from the start.}other{}}",
+  "@loginErrorMessage": {
+    "description": "User-friendly translations of ErrorCodes coming from a failed login process",
+    "placeholders": {
+      "errorCode": {}
+    }
+  }
+}
